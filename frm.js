@@ -653,7 +653,7 @@ function storeuser(user, sheet) {
     }
     // Fake api for making post requests 
     let fetchRes = fetch(
-        "http://localhost:4000/api/sheets/storeuser",
+        "https://ff-backend-4ikb.onrender.com/api/sheets/storeuser",
         options);
     fetchRes.then(res =>
         res.json()).then(d => {
@@ -665,7 +665,7 @@ function checkout(userorder) {
     console.log(userorder);
 
     const fetchres = fetch(
-        "http://localhost:4000/api/payments/requestkey",
+        "https://ff-backend-4ikb.onrender.com/api/payments/requestkey",
     );
     fetchres.then(res =>
         res.json()).then(d => {
@@ -680,7 +680,7 @@ function checkout(userorder) {
             }
 
             let fetchRes = fetch(
-                "http://localhost:4000/api/payments/createorder",
+                "https://ff-backend-4ikb.onrender.com/api/payments/createorder",
                 options);
             fetchRes.then(res =>
                 res.json()).then(data => {
@@ -707,7 +707,7 @@ function checkout(userorder) {
                             }
                             // Fake api for making post requests 
                             let fetchRes = fetch(
-                                "http://localhost:4000/api/payments/verifypayment",
+                                "https://ff-backend-4ikb.onrender.com/api/payments/verifypayment",
                                 voptions);
                             fetchRes.then(res =>
                                 res.json()).then(vd => {
