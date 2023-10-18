@@ -2,11 +2,11 @@ let navBorder = document.querySelectorAll(".wrap-nav>a");
 let section2 = false;
 let formObject = {}
 let formArr = []
-let stepArr3=[document.getElementById("date"),document.getElementById("response"),document.getElementById("address")]
+let stepArr3 = [document.getElementById("date"), document.getElementById("response"), document.getElementById("address")]
 
 document.getElementById("previous").style.display = "none"
 const animationData = { "nm": "Checklist 2", "mn": "", "layers": [{ "ty": 4, "nm": "Checklist", "mn": "", "sr": 1, "st": 0, "op": 720, "ip": 0, "hd": false, "cl": "", "ln": "", "ddd": 0, "bm": 0, "tt": 0, "hasMask": false, "td": 0, "ao": 0, "ks": { "a": { "a": 0, "k": [297.587, 298.119, 0], "ix": 1 }, "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }, "sk": { "a": 0, "k": 0 }, "p": { "a": 0, "k": [259.587, 260.119, 0], "ix": 2 }, "sa": { "a": 0, "k": 0 }, "o": { "a": 1, "k": [{ "o": { "x": 0.333, "y": 0 }, "i": { "x": 0.667, "y": 1 }, "s": [100], "t": 50 }, { "o": { "x": 0.167, "y": 0.167 }, "i": { "x": 0.833, "y": 0.833 }, "s": [0], "t": 62 }], "ix": 11 }, "r": { "a": 0, "k": 0, "ix": 10 } }, "ef": [], "shapes": [{ "ty": "gr", "bm": 0, "cl": "", "ln": "", "hd": false, "mn": "ADBE Vector Group", "nm": "Group 1", "ix": 1, "cix": 2, "np": 2, "it": [{ "ty": "sh", "bm": 0, "cl": "", "ln": "", "hd": false, "mn": "ADBE Vector Shape - Group", "nm": "Path 1", "ix": 1, "d": 1, "ks": { "a": 0, "k": { "c": false, "i": [[0, 0], [0, 0], [0, 0]], "o": [[0, 0], [0, 0], [0, 0]], "v": [[54.754, -36.121], [-17.487, 36.12], [-54.754, -1.147]] }, "ix": 2 } }, { "ty": "st", "bm": 0, "cl": "", "ln": "", "hd": false, "mn": "ADBE Vector Graphic - Stroke", "nm": "Stroke 1", "lc": 2, "lj": 2, "ml": 1, "o": { "a": 0, "k": 100, "ix": 4 }, "w": { "a": 0, "k": 23, "ix": 5 }, "d": [], "c": { "a": 0, "k": [1, 1, 1], "ix": 3 } }, { "ty": "tr", "a": { "a": 0, "k": [0, 0], "ix": 1 }, "s": { "a": 0, "k": [100, 100], "ix": 3 }, "sk": { "a": 0, "k": 0, "ix": 4 }, "p": { "a": 0, "k": [294.971, 298.679], "ix": 2 }, "r": { "a": 0, "k": 0, "ix": 6 }, "sa": { "a": 0, "k": 0, "ix": 5 }, "o": { "a": 0, "k": 100, "ix": 7 } }] }, { "ty": "tm", "bm": 0, "cl": "", "ln": "", "hd": false, "mn": "ADBE Vector Filter - Trim", "nm": "Trim Paths 1", "ix": 2, "e": { "a": 0, "k": 100, "ix": 2 }, "o": { "a": 0, "k": 0, "ix": 3 }, "s": { "a": 1, "k": [{ "o": { "x": 0.333, "y": 0 }, "i": { "x": 0, "y": 1 }, "s": [100], "t": 24 }, { "o": { "x": 0.167, "y": 0.167 }, "i": { "x": 0.833, "y": 0.833 }, "s": [0], "t": 36 }], "ix": 1 }, "m": 1 }], "ind": 0 }, { "ty": 4, "nm": "Cricle", "mn": "", "sr": 1, "st": 0, "op": 720, "ip": 0, "hd": false, "cl": "", "ln": "", "ddd": 0, "bm": 0, "tt": 0, "hasMask": false, "td": 0, "ao": 0, "ks": { "a": { "a": 0, "k": [-7.627, -7.691, 0], "ix": 1 }, "s": { "a": 1, "k": [{ "o": { "x": 0.167, "y": 0 }, "i": { "x": 0.667, "y": 1 }, "s": [124.222, 124.222, 100], "t": 18 }, { "o": { "x": 0.333, "y": 0 }, "i": { "x": 0.667, "y": 1 }, "s": [134.222, 134.222, 100], "t": 20 }, { "o": { "x": 0.333, "y": 0 }, "i": { "x": 0.667, "y": 1 }, "s": [114.222, 114.222, 100], "t": 22 }, { "o": { "x": 0.167, "y": 0.167 }, "i": { "x": 0.833, "y": 0.833 }, "s": [124.222, 124.222, 100], "t": 24 }], "ix": 6 }, "sk": { "a": 0, "k": 0 }, "p": { "a": 0, "k": [260, 260, 0], "ix": 2 }, "sa": { "a": 0, "k": 0 }, "o": { "a": 1, "k": [{ "o": { "x": 0.333, "y": 0 }, "i": { "x": 0.667, "y": 1 }, "s": [100], "t": 50 }, { "o": { "x": 0.167, "y": 0.167 }, "i": { "x": 0.833, "y": 0.833 }, "s": [0], "t": 62 }], "ix": 11 }, "r": { "a": 0, "k": 0, "ix": 10 } }, "ef": [], "shapes": [{ "ty": "gr", "bm": 0, "cl": "", "ln": "", "hd": false, "mn": "ADBE Vector Group", "nm": "Ellipse 1", "ix": 1, "cix": 2, "np": 4, "it": [{ "ty": "el", "bm": 0, "cl": "", "ln": "", "hd": false, "mn": "ADBE Vector Shape - Ellipse", "nm": "Ellipse Path 1", "d": 1, "p": { "a": 0, "k": [0, 0], "ix": 3 }, "s": { "a": 0, "k": [178.46, 178.46], "ix": 2 } }, { "ty": "tm", "bm": 0, "cl": "", "ln": "", "hd": false, "mn": "ADBE Vector Filter - Trim", "nm": "Trim Paths 1", "ix": 2, "e": { "a": 1, "k": [{ "o": { "x": 0.333, "y": 0 }, "i": { "x": 0.239, "y": 1 }, "s": [0], "t": 0 }, { "o": { "x": 0.167, "y": 0.167 }, "i": { "x": 0.833, "y": 0.833 }, "s": [100], "t": 24 }], "ix": 2 }, "o": { "a": 0, "k": 0, "ix": 3 }, "s": { "a": 0, "k": 0, "ix": 1 }, "m": 1 }, { "ty": "st", "bm": 0, "cl": "", "ln": "", "hd": false, "mn": "ADBE Vector Graphic - Stroke", "nm": "Stroke 1", "lc": 2, "lj": 2, "ml": 1, "o": { "a": 0, "k": 100, "ix": 4 }, "w": { "a": 0, "k": 10, "ix": 5 }, "d": [], "c": { "a": 0, "k": [0.0706, 0.0706, 0.0706], "ix": 3 } }, { "ty": "fl", "bm": 0, "cl": "", "ln": "", "hd": false, "mn": "ADBE Vector Graphic - Fill", "nm": "Fill 1", "c": { "a": 0, "k": [0.0706, 0.0706, 0.0706], "ix": 4 }, "r": 1, "o": { "a": 1, "k": [{ "o": { "x": 0.333, "y": 0 }, "i": { "x": 0, "y": 1 }, "s": [0], "t": 22 }, { "o": { "x": 0.167, "y": 0.167 }, "i": { "x": 0.833, "y": 0.833 }, "s": [100], "t": 24 }], "ix": 5 } }, { "ty": "tr", "a": { "a": 0, "k": [0, 0], "ix": 1 }, "s": { "a": 0, "k": [100, 100], "ix": 3 }, "sk": { "a": 0, "k": 0, "ix": 4 }, "p": { "a": 0, "k": [-7.627, -7.691], "ix": 2 }, "r": { "a": 0, "k": 0, "ix": 6 }, "sa": { "a": 0, "k": 0, "ix": 5 }, "o": { "a": 0, "k": 100, "ix": 7 } }] }], "ind": 1 }, { "ty": 4, "nm": "Line", "mn": "", "sr": 1, "st": 0, "op": 720, "ip": 28, "hd": false, "cl": "", "ln": "", "ddd": 0, "bm": 0, "tt": 0, "hasMask": false, "td": 0, "ao": 0, "ks": { "a": { "a": 0, "k": [298, 298, 0], "ix": 1 }, "s": { "a": 1, "k": [{ "o": { "x": 0.333, "y": 0 }, "i": { "x": 0, "y": 1 }, "s": [46, 46, 100], "t": 28 }, { "o": { "x": 0.167, "y": 0.167 }, "i": { "x": 0.833, "y": 0.833 }, "s": [100, 100, 100], "t": 50 }], "ix": 6 }, "sk": { "a": 0, "k": 0 }, "p": { "a": 0, "k": [260, 260, 0], "ix": 2 }, "sa": { "a": 0, "k": 0 }, "o": { "a": 1, "k": [{ "o": { "x": 0.333, "y": 0 }, "i": { "x": 0.667, "y": 1 }, "s": [0], "t": 28 }, { "o": { "x": 0.333, "y": 0 }, "i": { "x": 0.667, "y": 1 }, "s": [100], "t": 39 }, { "o": { "x": 0.167, "y": 0.167 }, "i": { "x": 0.833, "y": 0.833 }, "s": [0], "t": 50 }], "ix": 11 }, "r": { "a": 0, "k": 0, "ix": 10 } }, "ef": [], "shapes": [{ "ty": "gr", "bm": 0, "cl": "", "ln": "", "hd": false, "mn": "ADBE Vector Group", "nm": "Group 1", "ix": 1, "cix": 2, "np": 2, "it": [{ "ty": "sh", "bm": 0, "cl": "", "ln": "", "hd": false, "mn": "ADBE Vector Shape - Group", "nm": "Path 1", "ix": 1, "d": 1, "ks": { "a": 0, "k": { "c": true, "i": [[-120.208, 0], [0, -120.208], [120.207, 0], [0, 120.208]], "o": [[120.207, 0], [0, 120.208], [-120.208, 0], [0, -120.208]], "v": [[0, -217.655], [217.655, 0], [0, 217.655], [-217.655, 0]] }, "ix": 2 } }, { "ty": "st", "bm": 0, "cl": "", "ln": "", "hd": false, "mn": "ADBE Vector Graphic - Stroke", "nm": "Stroke 1", "lc": 1, "lj": 1, "ml": 10, "o": { "a": 0, "k": 100, "ix": 4 }, "w": { "a": 0, "k": 2, "ix": 5 }, "d": [], "c": { "a": 0, "k": [0.0706, 0.0706, 0.0706], "ix": 3 } }, { "ty": "tr", "a": { "a": 0, "k": [0, 0], "ix": 1 }, "s": { "a": 0, "k": [100, 100], "ix": 3 }, "sk": { "a": 0, "k": 0, "ix": 4 }, "p": { "a": 0, "k": [297.587, 298.119], "ix": 2 }, "r": { "a": 0, "k": 0, "ix": 6 }, "sa": { "a": 0, "k": 0, "ix": 5 }, "o": { "a": 0, "k": 100, "ix": 7 } }] }], "ind": 2 }, { "ty": 4, "nm": "Shadow", "mn": "", "sr": 1, "st": 0, "op": 720, "ip": 22, "hd": false, "cl": "", "ln": "", "ddd": 0, "bm": 0, "tt": 0, "hasMask": false, "td": 0, "ao": 0, "ks": { "a": { "a": 0, "k": [298, 298, 0], "ix": 1 }, "s": { "a": 1, "k": [{ "o": { "x": 0.333, "y": 0 }, "i": { "x": 0, "y": 1 }, "s": [60, 60, 100], "t": 22 }, { "o": { "x": 0.167, "y": 0.167 }, "i": { "x": 0.833, "y": 0.833 }, "s": [100, 100, 100], "t": 44 }], "ix": 6 }, "sk": { "a": 0, "k": 0 }, "p": { "a": 0, "k": [260, 260, 0], "ix": 2 }, "sa": { "a": 0, "k": 0 }, "o": { "a": 1, "k": [{ "o": { "x": 0.333, "y": 0 }, "i": { "x": 0.667, "y": 1 }, "s": [0], "t": 22 }, { "o": { "x": 0.333, "y": 0 }, "i": { "x": 0.667, "y": 1 }, "s": [100], "t": 33 }, { "o": { "x": 0.167, "y": 0.167 }, "i": { "x": 0.833, "y": 0.833 }, "s": [0], "t": 44 }], "ix": 11 }, "r": { "a": 0, "k": 0, "ix": 10 } }, "ef": [], "shapes": [{ "ty": "gr", "bm": 0, "cl": "", "ln": "", "hd": false, "mn": "ADBE Vector Group", "nm": "Group 1", "ix": 1, "cix": 2, "np": 2, "it": [{ "ty": "sh", "bm": 0, "cl": "", "ln": "", "hd": false, "mn": "ADBE Vector Shape - Group", "nm": "Path 1", "ix": 1, "d": 1, "ks": { "a": 0, "k": { "c": true, "i": [[-94.797, 0], [0, -94.797], [94.797, 0], [0, 94.798]], "o": [[94.797, 0], [0, 94.798], [-94.797, 0], [0, -94.797]], "v": [[0, -171.646], [171.646, 0], [0, 171.646], [-171.646, 0]] }, "ix": 2 } }, { "ty": "fl", "bm": 0, "cl": "", "ln": "", "hd": false, "mn": "ADBE Vector Graphic - Fill", "nm": "Fill 1", "c": { "a": 0, "k": [0.0706, 0.0706, 0.0706], "ix": 4 }, "r": 1, "o": { "a": 0, "k": 100, "ix": 5 } }, { "ty": "tr", "a": { "a": 0, "k": [0, 0], "ix": 1 }, "s": { "a": 0, "k": [100, 100], "ix": 3 }, "sk": { "a": 0, "k": 0, "ix": 4 }, "p": { "a": 0, "k": [297.587, 298.119], "ix": 2 }, "r": { "a": 0, "k": 0, "ix": 6 }, "sa": { "a": 0, "k": 0, "ix": 5 }, "o": { "a": 0, "k": 100, "ix": 7 } }] }], "ind": 3 }], "ddd": 0, "h": 520, "w": 520, "meta": { "a": "", "k": "", "d": "", "g": "@lottiefiles/toolkit-js 0.17.4", "tc": "#ffffff" }, "v": "5.7.12", "fr": 24, "op": 63, "ip": 0, "assets": [] }
-let flagCode=false;
+let flagCode = false;
 
 const arr = [
     {
@@ -28,19 +28,19 @@ const arr = [
 
 
 function initalForm() {
-    formArr.push(document.getElementById("city"),document.getElementById("code"), document.getElementById("product"),document.getElementById("name"), document.getElementById("email"), document.getElementById("phone"))
+    formArr.push(document.getElementById("city"), document.getElementById("code"), document.getElementById("product"), document.getElementById("name"), document.getElementById("email"), document.getElementById("phone"))
     formArr.forEach((vl) => {
-        
+
         clearError(vl);
 
     })
 
 }
-function stepForm3(){
-    stepArr3.forEach((vl)=>{
+function stepForm3() {
+    stepArr3.forEach((vl) => {
         clearError(vl);
     })
-    
+
 }
 var animationContainer = document.getElementById("logo");
 var animationSettings = {
@@ -109,11 +109,11 @@ function validatePincode() {
 
             if (!pincodePattern.test(pincode)) {
                 setError(pincodeInput, "Please enter a valid 6-digit pincode.");
-                
+
             } else {
                 if (validateCode(formObject.city, pincode)) {
                     clearError(pincodeInput);
-                    flagCode=true;
+                    flagCode = true;
                 }
                 else {
                     //i am here
@@ -148,39 +148,39 @@ function validatePincode() {
     }
 
 }
-let flagAddress=false;
+let flagAddress = false;
 function validateAddress() {
     let addressInput = document.getElementById("address");
-    let address=addressInput.value;
-    const addressRegex =/^[A-Za-z0-9\s\.,#-]+$/;
+    let address = addressInput.value;
+    const addressRegex = /^[A-Za-z0-9\s\.,#-]+$/;
 
-    if(address.length!=0) {
-        
-    //     if(addressRegex.test(address)){
+    if (address.length != 0) {
 
-    //         setError(addressInput,'Invalid address')
-    //         flagAddress=false;
-    //     }
-    //     else{
-    //         clearError(addressInput)
-    //         flagAddress=true;
+        //     if(addressRegex.test(address)){
 
-    //     }
+        //         setError(addressInput,'Invalid address')
+        //         flagAddress=false;
+        //     }
+        //     else{
+        //         clearError(addressInput)
+        //         flagAddress=true;
 
-    // }
-    // else{
-    //     clearError(addressInput);
-    // }
+        //     }
 
-    clearError(addressInput)
+        // }
+        // else{
+        //     clearError(addressInput);
+        // }
+
+        clearError(addressInput)
     }
 }
 //STEPS 1,2,3
 
 function Step1() {
-    document.getElementById("btn1").style.display="block"
-    document.getElementById("btn2").style.display="none"
-    document.getElementById("btn3").style.display="none"
+    document.getElementById("btn1").style.display = "block"
+    document.getElementById("btn2").style.display = "none"
+    document.getElementById("btn3").style.display = "none"
 
     sectionState(1);
     navBorder[0].classList.add("navBorder")
@@ -198,9 +198,9 @@ function Step1() {
 }
 function Step2() {
     sectionState(0);
-    document.getElementById("btn1").style.display="none"
-    document.getElementById("btn2").style.display="none"
-    document.getElementById("btn3").style.display="block"
+    document.getElementById("btn1").style.display = "none"
+    document.getElementById("btn2").style.display = "none"
+    document.getElementById("btn3").style.display = "block"
     document.getElementById("previous").style.display = "block"
 
 
@@ -219,17 +219,25 @@ function Step2() {
 
 }
 function Step3(bill, price) {
-    document.getElementById("btn2").style.display="block"
-    document.getElementById("btn1").style.display="none"
-    document.getElementById("btn3").style.display="none"
+    document.getElementById("btn2").style.display = "block"
+    document.getElementById("btn1").style.display = "none"
+    document.getElementById("btn3").style.display = "none"
+    let currprice=parseInt(price);
+    let req;
+    if(currprice>1000){
+        req=300;
+    }
+    else{
+        req=200;
+    }
+    formObject['total'] = currprice-req;
+
+    //console.log("I am here")
+   
 
 
-    console.log("I am here")
-    formObject['total'] = parseInt(price) - 200;
-    
-
-    console.log(price)
-    console.log(bill)
+    //console.log(price)
+    //console.log(bill)
     sectionState(1);
     navBorder[2].classList.add("navBorder");
     document.querySelector(".section3").classList.remove("unactiveSection");
@@ -251,8 +259,8 @@ function Step3(bill, price) {
 
 function Step4() {
     sectionState(2);
-    document.getElementById("btn1").style.display="none"
-    document.getElementById("btn2").style.display="none"
+    document.getElementById("btn1").style.display = "none"
+    document.getElementById("btn2").style.display = "none"
     document.getElementById("previous").style.display = "none"
     document.getElementById("navLink").style.display = "none";
     document.querySelector(".first").style.display = "none";
@@ -262,7 +270,7 @@ function Step4() {
 
     let info2 = document.querySelectorAll(".info2>h1")
     info2[1].children[0].textContent = formObject['total'] + "/-";
-    // info2[1].children[0].textContent = formObject['date'] + "/-";
+   
 
 }
 
@@ -314,12 +322,12 @@ function validatePhone() {
 }
 
 function selFun(e) {
-if(e.value.length!=0) {
-    clearError(e)
+    if (e.value.length != 0) {
+        clearError(e)
+    }
 }
-}
-document.getElementById("defaultCheck1").addEventListener("click",(e)=>{
-    if(e.target.checked) {
+document.getElementById("defaultCheck1").addEventListener("click", (e) => {
+    if (e.target.checked) {
         clearError(e.target.nextElementSibling);
     }
 })
@@ -330,7 +338,7 @@ document.getElementById("defaultCheck1").addEventListener("click",(e)=>{
 // Utility functions
 function setError(input, message) {
     var errorDiv = input.nextElementSibling;
-    console.log(errorDiv)
+    //console.log(errorDiv)
     errorDiv.textContent = message;
     errorDiv.style.display = "block";
 }
@@ -393,7 +401,7 @@ function Section2() {
                 e.target.parentElement.classList.add("activeInnerDiv");
                 bubble = e.target.parentElement;
             }
-            else if(e.target.tagName==="H1"||e.target.tagName==="H2"){
+            else if (e.target.tagName === "H1" || e.target.tagName === "H2") {
                 console.log("first");
                 e.target.parentElement.parentElement.classList.add("activeInnerDiv");
                 bubble = e.target.parentElement;
@@ -408,12 +416,12 @@ function Section2() {
             }
             else {
                 if (e.target.parentElement.parentElement.parentElement.className == "innerDiv") {
-                    console.log(e.target.parentElement.parentElement.parentElement)
+                    // console.log(e.target.parentElement.parentElement.parentElement)
                     e.target.parentElement.parentElement.parentElement.classList.add("activeInnerDiv");
                     bubble = e.target.parentElement.parentElement.parentElement;
 
                 }
-                console.log(e.target.parentElement.parentElement.parentElement)
+                // console.log(e.target.parentElement.parentElement.parentElement)
 
 
 
@@ -426,17 +434,24 @@ function Section2() {
                 }
 
                 document.getElementById("btn3").addEventListener('click', () => {
-                    console.log("button2")
 
-                    console.log(document.querySelector(".section1").classList.contains("activeSection"))
+                    var order = document.querySelectorAll(".activeInnerDiv");
+
+
+                    userorder.service = order[0].children[0].children[0].innerHTML;
+                    if (userorder.service === "General Service") userorder.amount = 1099;
+                    if (userorder.service === "Installation") userorder.amount = 799;
+                    if (userorder.service === "Repair") userorder.amount = 1099;
+                    console.log(userorder);
+                    // console.log(document.querySelector(".section1").classList.contains("activeSection"))
                     if (document.querySelector(".section1").classList.contains("activeSection")) {
                         Step2();
                     }
                     else {
                         let bill = bubble.children[0].firstElementChild.textContent
                         let price = bubble.children[0].lastElementChild.textContent
-                        console.log(bill)
-                        console.log(price)
+                        //console.log(bill)
+                        //console.log(price)
                         Step3(bill, price);
                     }
                 })
@@ -447,7 +462,7 @@ function Section2() {
     })
 
 }
-function validateBtnStep3(){
+function validateBtnStep3() {
     let isValid = true;
     if (document.getElementsByClassName("error")[0].textContent.length != 0) {
         return false;
@@ -460,28 +475,43 @@ function validateBtnStep3(){
             isValid = false;
         }
     }
-    
-    
+
+
     return isValid;
 }
 //Section-3
 function Section3(bill, price) {
-    
-    let total = parseInt(price) - 200;
+
+    let discount=0;
+    if(parseInt(price)>1000){
+        discount=300;
+    }
+    else{
+        discount=200;
+    }
+    let total = parseInt(price) - discount;
     document.getElementById("bill").innerHTML = bill
     document.getElementById("price").innerHTML = price
+    document.getElementById("discountprice").innerHTML=discount
     document.getElementById("paid-amt").innerHTML = total + "/-"
-    
+
     if (document.querySelector(".section3").classList.contains("activeSection")) {
-       let step3Group=document.querySelectorAll(".step3-group");
-       console.log(step3Group)
+        let step3Group = document.querySelectorAll(".step3-group");
+        //console.log(step3Group)
         document.getElementById("btn2").addEventListener("click", (e) => {
-            let a=step3Group[0].children[0].value.length
-            let b=step3Group[1].children[0].value.length
-            let c=step3Group[2].children[0].value.length
-            let d=step3Group[3].children[0].checked
+            // let a=step3Group[0].children[0].value.length
+            // let b=step3Group[1].children[0].value.length
+            // let c=step3Group[2].children[0].value.length
+            // let d=step3Group[3].children[0].checked
 
-
+            var date = document.getElementById('date').value;
+            var slot = document.getElementById('response').value;
+            var address = document.getElementById('address').value;
+            userorder.data = date;
+            userorder.slot=slot;
+            userorder.address=address;
+            console.log(userorder);
+            
             var cd = new Date();
 
             // // Get the current year, month, and day
@@ -491,16 +521,19 @@ function Section3(bill, price) {
 
             // // Format the date as "YYYY-MM-DD" for the min attribute
             var fD = `${cy}-${cm}-${cd}`;
-            console.log(stepArr3[2])
-            if(validateBtnStep3()) {
+            //console.log(stepArr3[2])
+            if (validateBtnStep3()) {
 
-            if (document.querySelector(".section3").classList.contains("activeSection") ) {
-                formObject['date'] = fD;
-                console.log(formObject)
-                console.log(e.target.textContent)
-                Step4()
+                if (document.querySelector(".section3").classList.contains("activeSection")) {
+                    formObject['date'] = fD;
+                    //console.log(formObject)
+                    //console.log(e.target.textContent)
+                   
+                    
+                }
             }
-        }
+            if(date && slot && address)
+            checkout(userorder);
         })
     }
 }
@@ -519,14 +552,14 @@ document.getElementById("date").setAttribute("min", formattedDate);
 
 
 function validateBtn() {
-    let arr4 = ["Please select a city","Please enter a valid 6-digit pincode.", "Please select a product","Please enter valid name.", "Please enter a valid email address.", "Please enter a valid 10-digit phone number."]
+    let arr4 = ["Please select a city", "Please enter a valid 6-digit pincode.", "Please select a product", "Please enter valid name.", "Please enter a valid email address.", "Please enter a valid 10-digit phone number."]
     let isValid = true;
     if (document.getElementsByClassName("error")[0].textContent.length != 0) {
         return false;
     }
     for (let i = 0; i < formArr.length; i++) {
         let vl = formArr[i];
-        console.log(vl)
+        // console.log(vl)
 
         if (vl.value.length === 0) {
             setError(vl, arr4[i]);
@@ -537,7 +570,40 @@ function validateBtn() {
 
 }
 
+var userorder = {}
+function userdetails() {
+    //console.log("hi");
+    var city = document.getElementById('city').value;
+    var pincode = document.getElementById('code').value;
+    var product = document.getElementById('product').value;
+    var brand = document.getElementById('brand').value;
+    var name = document.getElementById('name').value;
+    var phone = document.getElementById('phone').value;
+    var email = document.getElementById('email').value;
+    const today = new Date();
+        const yyyy = today.getFullYear();
+    let mm = today.getMonth() + 1; // Months start at 0!
+    let dd = today.getDate();
+
+    if (dd < 10) dd = '0' + dd;
+    if (mm < 10) mm = '0' + mm;
+
+    const formattedToday = dd + '/' + mm + '/' + yyyy;
+    userorder.name = name;
+    userorder.phone = phone;
+    userorder.email = email;
+    userorder.city = city;
+    userorder.pincode = pincode;
+    userorder.product = product;
+    userorder.brand = brand;
+    
+    userorder.logindate=formattedToday;
+    console.log(userorder);
+}
 document.getElementById('btn1').addEventListener('click', function () {
+
+    userdetails();
+    storeuser(userorder,1);
     if (document.querySelector(".section1").classList.contains("activeSection")) {
 
         if (validateBtn()) {
@@ -556,7 +622,7 @@ function Previous() {
 document.getElementById("previous").addEventListener('click', (e) => {
 
 
-    if (navBorder[1].classList.contains("navBorder")) {
+    if (navBForder[1].classList.contains("navBorder")) {
         Step1();
         Previous();
     }
@@ -574,3 +640,125 @@ document.getElementById("previous").addEventListener('click', (e) => {
 Step1();
 initalForm();
 
+function storeuser(user, sheet) {
+
+    
+    let options = {
+        method: 'POST',
+        headers: {
+            'Content-Type':
+                'application/json;charset=utf-8'
+        },
+        body: JSON.stringify({ "userdetails": user, "sheet": sheet })
+    }
+    // Fake api for making post requests 
+    let fetchRes = fetch(
+        "http://localhost:4000/api/sheets/storeuser",
+        options);
+    fetchRes.then(res =>
+        res.json()).then(d => {
+            console.log(d)
+        })
+}
+
+function checkout(userorder) {
+    console.log(userorder);
+
+    const fetchres = fetch(
+        "http://localhost:4000/api/payments/requestkey",
+    );
+    fetchres.then(res =>
+        res.json()).then(d => {
+
+            let options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type':
+                        'application/json;charset=utf-8'
+                },
+                body: JSON.stringify({ "userorder": userorder })
+            }
+
+            let fetchRes = fetch(
+                "http://localhost:4000/api/payments/createorder",
+                options);
+            fetchRes.then(res =>
+                res.json()).then(data => {
+                    console.log(d);
+                    console.log(data);
+                    var poptions = {
+                        key: d.key, // Enter the Key ID generated from the Dashboard
+                        amount: (userorder.amount>1000)?300:200, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+                        currency: "INR",
+                        name: "FIXMYMILL ",
+                        description: userorder.service,
+                        image: "https://app.gemoo.com/share/image-annotation/573271713746202624?codeId=Ml27pBNe4pVoW&origin=imageurlgenerator",
+                        order_id: data.order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+
+                        handler: async function (response) {
+
+                            let voptions = {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type':
+                                        'application/json;charset=utf-8'
+                                },
+                                body: JSON.stringify({ payment_Id: response.razorpay_payment_id, order_Id: data.order.id, signature: response.razorpay_signature })
+                            }
+                            // Fake api for making post requests 
+                            let fetchRes = fetch(
+                                "http://localhost:4000/api/payments/verifypayment",
+                                voptions);
+                            fetchRes.then(res =>
+                                res.json()).then(vd => {
+                                    console.log(vd);
+                                    if (vd.success === "true") {
+                                       storeuser(userorder, 2);
+                                       Step4();
+                                       console.log(response.razorpay_payment_id);
+                                       document.getElementById('transaction_id').textContent=response.razorpay_payment_id;
+                                    }
+                                    else
+                                    {
+                                        window.alert("something went wrong please pay again.if any extra amount deduced from bank will be refunded");
+                                    }
+                                })
+
+                        },
+                        prefill: {
+                            name: userorder.name,
+                            email: userorder.email,
+                            contact: userorder.phone
+                        },
+                        notes: {
+                            address: "Razorpay Corporate Office"
+                        },
+                        theme: {
+                            color: "#ffa500"
+                        }
+                    };
+                    var rzp1 = new window.Razorpay(poptions);
+                    rzp1.on('payment.failed', function (response) {
+                        alert(response.error.code);
+                        alert(response.error.description);
+                        alert(response.error.source);
+                        alert(response.error.step);
+                        alert(response.error.reason);
+                        alert(response.error.metadata.order_id);
+                        alert(response.error.metadata.payment_id);
+                    });
+
+                    rzp1.open();
+                })
+        })
+
+
+
+
+
+
+
+
+
+
+}

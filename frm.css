@@ -338,6 +338,7 @@ input::placeholder {
 
 .info2 {
     width: 100%;
+    margin-left:25%;
 }
 
 .info2>h1 {
@@ -529,6 +530,6 @@ input::placeholder {
 }
 .bringing{
     font-size:20px !important;
-    font-weight:600;
-    font-style:oblique;
+    font-weight:500;
+    /* font-style:oblique; */
 }
