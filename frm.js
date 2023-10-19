@@ -442,7 +442,7 @@ function Section2() {
                     if (userorder.service === "General Service") userorder.amount = 1099;
                     if (userorder.service === "Installation") userorder.amount = 799;
                     if (userorder.service === "Repair") userorder.amount = 1099;
-                    console.log(userorder);
+                    //console.log(userorder);
                     // console.log(document.querySelector(".section1").classList.contains("activeSection"))
                     if (document.querySelector(".section1").classList.contains("activeSection")) {
                         Step2();
@@ -507,6 +507,7 @@ function Section3(bill, price) {
             var date = document.getElementById('date').value;
             var slot = document.getElementById('response').value;
             var address = document.getElementById('address').value;
+
             userorder.data = date;
             userorder.slot=slot;
             userorder.address=address;
@@ -532,7 +533,7 @@ function Section3(bill, price) {
                     
                 }
             }
-            if(date && slot && address)
+            if(date && slot && address && document.getElementById('defaultCheck1').checked)
             checkout(userorder);
         })
     }
@@ -662,7 +663,7 @@ function storeuser(user, sheet) {
 }
 
 function checkout(userorder) {
-    console.log(userorder);
+   // console.log(userorder);
 
     const fetchres = fetch(
         "https://ff-backend-4ikb.onrender.com/api/payments/requestkey",
@@ -688,7 +689,7 @@ function checkout(userorder) {
                     console.log(data);
                     var poptions = {
                         key: d.key, // Enter the Key ID generated from the Dashboard
-                        amount: (userorder.amount>1000)?300:200, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+                        amount: (userorder.amount>1000)?30000:20000, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
                         currency: "INR",
                         name: "FIXMYMILL ",
                         description: userorder.service,
