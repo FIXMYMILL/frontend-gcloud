@@ -534,7 +534,12 @@ function Section3(bill, price) {
                 }
             }
             if(date && slot && address && document.getElementById('defaultCheck1').checked)
+            {
+            
             checkout(userorder);
+            }
+            if(!document.getElementById('defaultCheck1').checked)
+            window.alert("please agree to terms and conditions");
         })
     }
 }
