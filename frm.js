@@ -628,7 +628,7 @@ function Previous() {
 document.getElementById("previous").addEventListener('click', (e) => {
 
 
-    if (navBForder[1].classList.contains("navBorder")) {
+    if (navBorder[1].classList.contains("navBorder")) {
         Step1();
         Previous();
     }
