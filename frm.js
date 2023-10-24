@@ -322,6 +322,16 @@ function validatePhone() {
 }
 
 function selFun(e) {
+    if(e.type=="date")
+    {
+        if(e.value.length>0){
+            e.placeholder="";
+        }
+        else
+        {
+            e.placeholder="dd-mm-yyyy"
+        }
+    }
     if (e.value.length != 0) {
         clearError(e)
     }
