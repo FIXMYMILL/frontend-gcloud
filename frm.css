@@ -390,6 +390,16 @@ input::placeholder {
    .transcation{
     font-size:15px;
    }
+   input[type="date"]::before{
+    content:attr(placeholder)!important;
+    color:black;
+    padding:0;
+    display: flex;
+}
+input[type="date"]{
+    height:2.5rem;
+    display: flex;
+}
 }
 
 @media screen and (max-width:786px) {
