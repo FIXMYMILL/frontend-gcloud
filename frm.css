@@ -422,6 +422,17 @@ input::placeholder {
         grid-template-columns: 40% 40%;
     }
 
+    input[type="date"]::before{
+        content:attr(placeholder)!important;
+        color:black;
+        padding:0;
+        display: flex;
+    }
+    input[type="date"]{
+        height:2.5rem;
+        display: flex;
+    }
+
 }
 
 
