@@ -1,3 +1,5 @@
+
+
 let navBorder = document.querySelectorAll(".wrap-nav>a");
 let section2 = false;
 let formObject = {}
@@ -508,12 +510,12 @@ function Section3(bill, price) {
     if (document.querySelector(".section3").classList.contains("activeSection")) {
         let step3Group = document.querySelectorAll(".step3-group");
         //console.log(step3Group)
-        document.getElementById("btn2").addEventListener("click", (e) => {
+        //document.getElementById("btn2").addEventListener("click", (e) => {
             // let a=step3Group[0].children[0].value.length
             // let b=step3Group[1].children[0].value.length
             // let c=step3Group[2].children[0].value.length
             // let d=step3Group[3].children[0].checked
-
+        document.getElementById("btn2").onclick=(e)=>{
             var date = document.getElementById('date').value;
             var slot = document.getElementById('response').value;
             var address = document.getElementById('address').value;
@@ -545,12 +547,13 @@ function Section3(bill, price) {
             }
             if(date && slot && address && document.getElementById('defaultCheck1').checked)
             {
-            
+            //console.log("hi");
+           // console.log(getEventListeners(document.getElementById("btn2")));
             checkout(userorder);
             }
             if(!document.getElementById('defaultCheck1').checked)
             window.alert("please agree to terms and conditions");
-        })
+        }//)
     }
 }
 
@@ -755,15 +758,16 @@ function checkout(userorder) {
                     };
                     var rzp1 = new window.Razorpay(poptions);
                     rzp1.on('payment.failed', function (response) {
-                        alert(response.error.code);
-                        alert(response.error.description);
-                        alert(response.error.source);
-                        alert(response.error.step);
-                        alert(response.error.reason);
-                        alert(response.error.metadata.order_id);
-                        alert(response.error.metadata.payment_id);
+                        alert("something went wrong.Please do repayment.If any amount deduced will be credited to your account within 3 days.please note the below payment id for future queries"+response.error.metadata.payment_id);
+                        // alert(response.error.code);
+                        // alert(response.error.description);
+                        // alert(response.error.source);
+                        // alert(response.error.step);
+                        // alert(response.error.reason);
+                        // alert(response.error.metadata.order_id);
+                        // alert(response.error.metadata.payment_id);
                     });
-
+                  
                     rzp1.open();
                 })
         })
