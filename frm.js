@@ -672,7 +672,7 @@ function storeuser(user, sheet) {
     }
     // Fake api for making post requests 
     let fetchRes = fetch(
-        "https://ff-backend-4ikb.onrender.com/api/sheets/storeuser",
+        "https://fixmymillbackend-production.up.railway.app/api/sheets/storeuser",
         options);
     fetchRes.then(res =>
         res.json()).then(d => {
@@ -684,7 +684,7 @@ function checkout(userorder) {
    // console.log(userorder);
 
     const fetchres = fetch(
-        "https://ff-backend-4ikb.onrender.com/api/payments/requestkey",
+        "https://fixmymillbackend-production.up.railway.app/api/payments/requestkey",
     );
     fetchres.then(res =>
         res.json()).then(d => {
@@ -699,7 +699,7 @@ function checkout(userorder) {
             }
 
             let fetchRes = fetch(
-                "https://ff-backend-4ikb.onrender.com/api/payments/createorder",
+                "https://fixmymillbackend-production.up.railway.app/api/payments/createorder",
                 options);
             fetchRes.then(res =>
                 res.json()).then(data => {
@@ -726,7 +726,7 @@ function checkout(userorder) {
                             }
                             // Fake api for making post requests 
                             let fetchRes = fetch(
-                                "https://ff-backend-4ikb.onrender.com/api/payments/verifypayment",
+                                "https://fixmymillbackend-production.up.railway.app/api/payments/verifypayment",
                                 voptions);
                             fetchRes.then(res =>
                                 res.json()).then(vd => {
