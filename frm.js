@@ -711,7 +711,7 @@ function checkout(userorder) {
                         currency: "INR",
                         name: "FIXMYMILL ",
                         description: userorder.service,
-                        image: "https://app.gemoo.com/share/image-annotation/573271713746202624?codeId=Ml27pBNe4pVoW&origin=imageurlgenerator",
+                        image: "images/Favicon.png",
                         order_id: data.order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
 
                         handler: async function (response) {
