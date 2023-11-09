@@ -18,8 +18,12 @@
 }
 .nav-ele{
     color:white !important;
-    margin-left:100px;
-    font-weight:bold;
+    margin-left:70px;
+    font-weight:500;
+}
+.image-nav{
+    margin-top:10px;
+    margin-left:55px
 }
 * {
     margin: 0;
@@ -510,6 +514,10 @@ input[type="date"]{
 }
 
 @media screen and (max-width:400px) {
+    .image-nav{
+        margin-top:10px;
+        margin-left:0px;
+    }
     .wrapper {
         padding: 0;
     }
