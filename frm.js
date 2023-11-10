@@ -14,17 +14,17 @@ const arr = [
     {
         name: "General Service",
         price: "1099/-",
-        list: ['VoltageCheck ', ' V beltCheck', 'Motor ', 'PCB Check', 'MCB Check', 'Lubrication', 'wiring ']
+        list: ['VoltageCheck ', ' V beltCheck', 'Motor check', 'PCB Check', 'MCB Check', 'Display console check', 'Lubrication', 'Belt adjustment check', 'wiring  check']
     },
     {
         name: "Repair",
         price: "1099/-",
-        list: [' VoltageCheck', ' V beltcheck', 'Motor ', 'PCB Check', 'MCB check', 'Lubrication', 'wiring ']
+        list: ['Repair of the product', ' VoltageCheck', ' V beltcheck', 'Motor check', 'PCB Check', 'MCB check', 'Lubrication', 'wiring check', 'Belt Adjustment check', 'Display console check']
     },
     {
         name: "Installation",
         price: "799/-",
-        list: ['VoltageCheck ', ' V beltcheck', 'Motor ', 'PCB check', 'MCB Check', 'Lubrication', 'wiring ']
+        list: ['Assembly of the product', 'Voltage Check', 'wiring check', 'Lubrication check', 'Belt adjustment check', 'Demo Usage']
     }
 ]
 
@@ -70,11 +70,11 @@ function sectionState(x) {
 
 // Define an array of valid PIN codes for the specified cities
 const validPincodes = {
-    Hyderabad:["500001","500002","500003","500004","500005","500006","500007","500008","500012","500013","500015","500016","500017","500018","500020","500022","500025","500026","500027","500028","500029","500030","500033","500034","500035","500036","500038","500039","500040","500041","500044","500045","500048","500051","500052","500053","500057","500058","500059","500060","500061","500062","500063","500064","500065","500067","500068","500069","500070","500071","500073","500074","500076","500077","500079","500080","500081","500082","500085","500095"],
-    Chennai: ["600001", "600002", "600003","600004","600005","600006","600007","600008","600009","600010","600011","600012","600013","600014","600015","600016","600017","600018","600019","600020"],
-    Coimbatore: ["641001","641002","641003","641004","641005","641006","641007","641008","641009","641010","641011","641012","641013","641014","641015","641016","641017","641018","641019","641021","641022","641023"],
-    Trivandrum: ["695001", "695002", "695003","695004","695005","695006","695007","695008","695009","695010","695011","695012","695013","695014","695015","695016","695017","695018","695019","695020"],
-    Visakhapatnam: ["530001", "530002", "530003", "530004", "530005", "530007", "530008", "530009", "530011", "530012", "530013", "530014", "530015", "530016", "530017", "530018", "530020","530022","53024"],
+    Hyderabad: ["500001", "500002", "500003", "500004", "500005", "500006", "500007", "500008", "500012", "500013", "500015", "500016", "500017", "500018", "500020", "500022", "500025", "500026", "500027", "500028", "500029", "500030", "500033", "500034", "500035", "500036", "500038", "500039", "500040", "500041", "500044", "500045", "500048", "500051", "500052", "500053", "500057", "500058", "500059", "500060", "500061", "500062", "500063", "500064", "500065", "500067", "500068", "500069", "500070", "500071", "500073", "500074", "500076", "500077", "500079", "500080", "500081", "500082", "500085", "500095"],
+    Chennai: ["600001", "600002", "600003", "600004", "600005", "600006", "600007", "600008", "600009", "600010", "600011", "600012", "600013", "600014", "600015", "600016", "600017", "600018", "600019", "600020"],
+    Coimbatore: ["641001", "641002", "641003", "641004", "641005", "641006", "641007", "641008", "641009", "641010", "641011", "641012", "641013", "641014", "641015", "641016", "641017", "641018", "641019", "641021", "641022", "641023"],
+    Trivandrum: ["695001", "695002", "695003", "695004", "695005", "695006", "695007", "695008", "695009", "695010", "695011", "695012", "695013", "695014", "695015", "695016", "695017", "695018", "695019", "695020"],
+    Visakhapatnam: ["530001", "530002", "530003", "530004", "530005", "530007", "530008", "530009", "530011", "530012", "530013", "530014", "530015", "530016", "530017", "530018", "530020", "530022", "53024"],
     Vijayawada: ["520002", "520003", "520004", "520005", "520006", "520007", "520008", "520009", "520010", "520011", "520012", "520013", "520014", "520015", "520016", "521104", "521107", "521108", "521134", "521137"],
     Nagpur: ["440001", "440002", "440003", "440004", "440005", "440006", "440007", "440008", "440009", "440010", "440011", "440012", "440013", "440014", "440015", "440016", "440017", "440018", "440019", "440020"],
     Kolkata: ["700001", "700002", "700003", "700004", "700005", "700006", "700007", "700008", "700009", "700010", "700011", "700012", "700013", "700014", "700015", "700016", "700017", "700018", "700019", "700020"],
@@ -224,18 +224,18 @@ function Step3(bill, price) {
     document.getElementById("btn2").style.display = "block"
     document.getElementById("btn1").style.display = "none"
     document.getElementById("btn3").style.display = "none"
-    let currprice=parseInt(price);
+    let currprice = parseInt(price);
     let req;
-    if(currprice>1000){
-        req=300;
+    if (currprice > 1000) {
+        req = 300;
     }
-    else{
-        req=200;
+    else {
+        req = 200;
     }
-    formObject['total'] = currprice-req;
+    formObject['total'] = currprice - req;
 
     //console.log("I am here")
-   
+
 
 
     //console.log(price)
@@ -272,7 +272,7 @@ function Step4() {
 
     let info2 = document.querySelectorAll(".info2>h1")
     info2[1].children[0].textContent = formObject['total'] + "/-";
-   
+
 
 }
 
@@ -324,14 +324,12 @@ function validatePhone() {
 }
 
 function selFun(e) {
-    if(e.type=="date")
-    {
-        if(e.value.length>0){
-            e.placeholder="";
+    if (e.type == "date") {
+        if (e.value.length > 0) {
+            e.placeholder = "";
         }
-        else
-        {
-            e.placeholder="dd-mm-yyyy"
+        else {
+            e.placeholder = "dd-mm-yyyy"
         }
     }
     if (e.value.length != 0) {
@@ -494,37 +492,37 @@ function validateBtnStep3() {
 //Section-3
 function Section3(bill, price) {
 
-    let discount=0;
-    if(parseInt(price)>1000){
-        discount=300;
+    let discount = 0;
+    if (parseInt(price) > 1000) {
+        discount = 300;
     }
-    else{
-        discount=200;
+    else {
+        discount = 200;
     }
     let total = parseInt(price) - discount;
     document.getElementById("bill").innerHTML = bill
     document.getElementById("price").innerHTML = price
-    document.getElementById("discountprice").innerHTML=discount
+    document.getElementById("discountprice").innerHTML = discount
     document.getElementById("paid-amt").innerHTML = total + "/-"
 
     if (document.querySelector(".section3").classList.contains("activeSection")) {
         let step3Group = document.querySelectorAll(".step3-group");
         //console.log(step3Group)
         //document.getElementById("btn2").addEventListener("click", (e) => {
-            // let a=step3Group[0].children[0].value.length
-            // let b=step3Group[1].children[0].value.length
-            // let c=step3Group[2].children[0].value.length
-            // let d=step3Group[3].children[0].checked
-        document.getElementById("btn2").onclick=(e)=>{
+        // let a=step3Group[0].children[0].value.length
+        // let b=step3Group[1].children[0].value.length
+        // let c=step3Group[2].children[0].value.length
+        // let d=step3Group[3].children[0].checked
+        document.getElementById("btn2").onclick = (e) => {
             var date = document.getElementById('date').value;
             var slot = document.getElementById('response').value;
             var address = document.getElementById('address').value;
 
             userorder.data = date;
-            userorder.slot=slot;
-            userorder.address=address;
+            userorder.slot = slot;
+            userorder.address = address;
             console.log(userorder);
-            
+
             var cd = new Date();
 
             // // Get the current year, month, and day
@@ -541,18 +539,17 @@ function Section3(bill, price) {
                     formObject['date'] = fD;
                     //console.log(formObject)
                     //console.log(e.target.textContent)
-                   
-                    
+
+
                 }
             }
-            if(date && slot && address && document.getElementById('defaultCheck1').checked)
-            {
-            //console.log("hi");
-           // console.log(getEventListeners(document.getElementById("btn2")));
-            checkout(userorder);
+            if (date && slot && address && document.getElementById('defaultCheck1').checked) {
+                //console.log("hi");
+                // console.log(getEventListeners(document.getElementById("btn2")));
+                checkout(userorder);
             }
-            if(!document.getElementById('defaultCheck1').checked)
-            window.alert("please agree to terms and conditions");
+            if (!document.getElementById('defaultCheck1').checked)
+                window.alert("please agree to terms and conditions");
         }//)
     }
 }
@@ -600,7 +597,7 @@ function userdetails() {
     var phone = document.getElementById('phone').value;
     var email = document.getElementById('email').value;
     const today = new Date();
-        const yyyy = today.getFullYear();
+    const yyyy = today.getFullYear();
     let mm = today.getMonth() + 1; // Months start at 0!
     let dd = today.getDate();
 
@@ -615,14 +612,14 @@ function userdetails() {
     userorder.pincode = pincode;
     userorder.product = product;
     userorder.brand = brand;
-    
-    userorder.logindate=formattedToday;
+
+    userorder.logindate = formattedToday;
     console.log(userorder);
 }
 document.getElementById('btn1').addEventListener('click', function () {
 
     userdetails();
-    storeuser(userorder,1);
+    storeuser(userorder, 1);
     if (document.querySelector(".section1").classList.contains("activeSection")) {
 
         if (validateBtn()) {
@@ -661,7 +658,7 @@ initalForm();
 
 function storeuser(user, sheet) {
 
-    
+
     let options = {
         method: 'POST',
         headers: {
@@ -681,7 +678,7 @@ function storeuser(user, sheet) {
 }
 
 function checkout(userorder) {
-   // console.log(userorder);
+    // console.log(userorder);
 
     const fetchres = fetch(
         "https://fixmymillbackend-production.up.railway.app/api/payments/requestkey",
@@ -707,7 +704,7 @@ function checkout(userorder) {
                     console.log(data);
                     var poptions = {
                         key: d.key, // Enter the Key ID generated from the Dashboard
-                        amount: (userorder.amount>1000)?30000:20000, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+                        amount: (userorder.amount > 1000) ? 30000 : 20000, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
                         currency: "INR",
                         name: "FIXMYMILL ",
                         description: userorder.service,
@@ -732,13 +729,12 @@ function checkout(userorder) {
                                 res.json()).then(vd => {
                                     console.log(vd);
                                     if (vd.success === "true") {
-                                       storeuser(userorder, 2);
-                                       Step4();
-                                       console.log(response.razorpay_payment_id);
-                                       document.getElementById('transaction_id').textContent=response.razorpay_payment_id;
+                                        storeuser(userorder, 2);
+                                        Step4();
+                                        console.log(response.razorpay_payment_id);
+                                        document.getElementById('transaction_id').textContent = response.razorpay_payment_id;
                                     }
-                                    else
-                                    {
+                                    else {
                                         window.alert("something went wrong please pay again.if any extra amount deduced from bank will be refunded");
                                     }
                                 })
@@ -758,7 +754,7 @@ function checkout(userorder) {
                     };
                     var rzp1 = new window.Razorpay(poptions);
                     rzp1.on('payment.failed', function (response) {
-                        alert("something went wrong.Please do repayment.If any amount deduced will be credited to your account within 3 days.please note the below payment id for future queries"+response.error.metadata.payment_id);
+                        alert("something went wrong.Please do repayment.If any amount deduced will be credited to your account within 3 days.please note the below payment id for future queries" + response.error.metadata.payment_id);
                         // alert(response.error.code);
                         // alert(response.error.description);
                         // alert(response.error.source);
@@ -767,7 +763,7 @@ function checkout(userorder) {
                         // alert(response.error.metadata.order_id);
                         // alert(response.error.metadata.payment_id);
                     });
-                  
+
                     rzp1.open();
                 })
         })
