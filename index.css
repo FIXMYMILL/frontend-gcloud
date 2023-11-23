@@ -125,7 +125,6 @@ body{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    
 }
 .wrapFirst>h1 , .wrapFirst>h2{
     text-align: center;
