@@ -385,7 +385,8 @@ input::placeholder {
     .step2 {
         grid-template-columns: repeat(3, 31%);
         /*change box size here add % that's all*/
-
+        overflow-y:scroll; 
+        height:500px;
     }
     .innerDiv{
         grid-template-columns: 25% 75%;
