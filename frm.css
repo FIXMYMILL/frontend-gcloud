@@ -1,16 +1,4 @@
-/* @font-face {
-    font-family: 'GothamRoundedMedium';
-    src: url('GothamRoundedMedium.otf') format('opentype');
-    /* Adjust the path to your font file */
-    /* font-weight: normal; */
-    /* Specify the font weight if applicable */
-/* }
 
-@font-face {
-    font-family: 'lightRounded';
-    src: url('GothamRoundedLight.otf') format('opentype');
-    font-weight: normal; */ 
-/* } */
 @font-face{
     font-family:"rubik";
     src:url('Rubik-VariableFont_wght.ttf') format('truetype');

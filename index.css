@@ -1,4 +1,10 @@
+@font-face{
+    font-family:"rubik";
+    src:url('Rubik-VariableFont_wght.ttf') format('truetype');
+    font-weight:normal;
+}
 *{
+    font-family:Rubik !important;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,7 +20,9 @@ body{
     justify-content: center;
     align-items: center;
 }
-
+.inputfieldindex{
+    font-family:Rubik;
+}
 
 .wrapper{
     width: 100%;
@@ -50,7 +58,7 @@ body{
     letter-spacing: 2px;
     font-size: 1.3rem;
     font-weight: 100;
-    font-family: sans-serif;
+    font-family: rubik;
 }
 .wrap-nav>a:hover{
     text-shadow: -5px 4px 6px rgba(71, 71, 71);
