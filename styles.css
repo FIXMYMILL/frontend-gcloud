@@ -1,3 +1,14 @@
+@font-face{
+  font-family:"rubik";
+  src:url('Rubik-VariableFont_wght.ttf') format('truetype');
+  font-weight:normal;
+}
+*{
+  font-family:Rubik !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .logo-image {
   width: 100px; /* Set the desired width */
   height: 100px; /* Set the desired height */
@@ -46,7 +57,11 @@ body {
 .services svg {
   width: 100%; /* Set the width of SVG to 100% */
   height: auto; /* Let the height adjust automatically to maintain aspect ratio */
-  max-width: 515px; /* Set a maximum width for the SVG to avoid becoming too large */
+  max-width: 515px;
+ /* Set a maximum width for the SVG to avoid becoming too large */
+}
+.services{
+  display:none;
 }
 
 @media (max-width: 768px) {
@@ -55,6 +70,28 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .privacy svg {
+    height: auto;
+    width: 360px;/* Allow the SVG to take up the full width on smaller screens */
+  }
+}
+
+.brand{
+  display: block;
+}
+@media (max-width: 600px) {
+  /* .privacy svg {
+    height: auto;
+    width: 360px;
+  }*/
+  .services{
+  display:block;
+  }
+  .brand{
+    display:none;
+  }
+}
 @media (max-width: 768px) {
   .privacy svg {
     height: auto;
