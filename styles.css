@@ -99,3 +99,21 @@ body {
 ul.dot-bullet-list {
 list-style-type: disc; /* Use 'disc' for dot bullets */
 }
+.loader {
+  border: 16px solid #f3f3f3; 
+  border-top: 16px solid #3498db; 
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  animation: spin 1s  infinite;
+  position: fixed;
+  left:40%;
+  top:40%;
+  z-index: 9999;
+  display:none;
+  /* background: url('https://lea.oranjuice.club/wp-content/uploads/2018/04/LeaSite_IntroAnimation270.gif') 50% 50% no-repeat rgb(249,249,249); */
+}
+.loading{
+  display:block;
+}
+
