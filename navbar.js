@@ -9,10 +9,10 @@ function closeNavbar() {
     navbar.classList.add("hidden");
 }
 
-toggleButton.addEventListener("click", (event) => {
-    event.stopPropagation(); // Prevent click propagation to document
-    toggleNavbar();
-});
+// toggleButton.addEventListener("click", (event) => {
+//     event.stopPropagation(); // Prevent click propagation to document
+//     toggleNavbar();
+// });
 
 document.addEventListener("click", (event) => {
     const target = event.target;
