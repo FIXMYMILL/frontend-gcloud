@@ -668,7 +668,7 @@ function storeuser(user, sheet) {
     }
     // Fake api for making post requests 
     let fetchRes = fetch(
-        "/api/sheets/storeuser",
+        "https://backend-production-1df8.up.railway.app/api/sheets/storeuser",
         options);
     fetchRes.then(res =>
         res.json()).then(d => {
