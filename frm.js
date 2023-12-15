@@ -668,7 +668,7 @@ function storeuser(user, sheet) {
     }
     // Fake api for making post requests 
     let fetchRes = fetch(
-        "https://fixmymillbackend-production.up.railway.app/api/sheets/storeuser",
+        "/api/sheets/storeuser",
         options);
     fetchRes.then(res =>
         res.json()).then(d => {
@@ -680,7 +680,7 @@ function checkout(userorder) {
     // console.log(userorder);
 
     const fetchres = fetch(
-        "https://fixmymillbackend-production.up.railway.app/api/payments/requestkey",
+        "https://backend-production-1df8.up.railway.app/api/payments/requestkey",
     );
     fetchres.then(res =>
         res.json()).then(d => {
@@ -695,7 +695,7 @@ function checkout(userorder) {
             }
 
             let fetchRes = fetch(
-                "https://fixmymillbackend-production.up.railway.app/api/payments/createorder",
+                "https://backend-production-1df8.up.railway.app/api/payments/createorder",
                 options);
             fetchRes.then(res =>
                 res.json()).then(data => {
@@ -722,7 +722,7 @@ function checkout(userorder) {
                             }
                             // Fake api for making post requests 
                             let fetchRes = fetch(
-                                "https://fixmymillbackend-production.up.railway.app/api/payments/verifypayment",
+                                "https://backend-production-1df8.up.railway.app/api/payments/verifypayment",
                                 voptions);
                             fetchRes.then(res =>
                                 res.json()).then(vd => {
