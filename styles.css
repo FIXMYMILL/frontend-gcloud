@@ -65,22 +65,22 @@ body {
   display:none;
 }
 .whatsapp-chat{
-  top:76%;
-  left:89%;
-  height:160px;
-  width:160px;
+  top:82%;
+  left:90%;
+  height:150px;
+  width:150px;
   position:fixed;
   z-index:9999;
 }
 
 .whatsapp-chat:hover{
-  height:170px;
-  width:170px;
+  height:160px;
+  width:160px;
 }
 
 @media screen and (max-width: 768px) {
   .whatsapp-chat{
-    top:80%;
+    top:83%;
     left:70%;
     height:150px;
     width:150px;

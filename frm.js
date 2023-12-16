@@ -762,7 +762,7 @@ function checkout(userorder) {
                         // alert(response.error.metadata.order_id);
                         // alert(response.error.metadata.payment_id);
                     });
-
+                    
                     rzp1.open();
                 })
         })
