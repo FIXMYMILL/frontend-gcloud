@@ -656,8 +656,6 @@ Step1();
 initalForm();
 
 function storeuser(user, sheet) {
-
-
     let options = {
         method: 'POST',
         headers: {
@@ -729,7 +727,7 @@ function checkout(userorder) {
                                     console.log(vd);
                                     if (vd.success === "true") {
                                         storeuser(userorder, 2);
-                                        Step4();
+                                        Step4(); 
                                         console.log(response.razorpay_payment_id);
                                         document.getElementById('transaction_id').textContent = response.razorpay_payment_id;
                                     }
