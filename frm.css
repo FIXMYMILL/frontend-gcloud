@@ -3,6 +3,7 @@
     font-family:"rubik";
     src:url('Rubik-VariableFont_wght.ttf') format('truetype');
     font-weight:normal;
+    font-display:swap;
 }
 .nav-ele{
     color:white !important;
