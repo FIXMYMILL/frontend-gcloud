@@ -1663,7 +1663,9 @@ function Step3(bill, price) {
   } else {
     req = 200;
   }
-  formObject["total"] = currprice - req;
+  // formObject["total"] = currprice - req;
+  formObject["total"] = currprice;
+
 
   //console.log("I am here")
 
