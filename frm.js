@@ -1921,7 +1921,7 @@ function Section3(bill, price) {
   let total = parseInt(price) - discount;
   document.getElementById("bill").innerHTML = bill;
   document.getElementById("price").innerHTML = price;
-  document.getElementById("discountprice").innerHTML = discount;
+  // document.getElementById("discountprice").innerHTML = discount;
   document.getElementById("paid-amt").innerHTML = total + "/-";
 
   if (document.querySelector(".section3").classList.contains("activeSection")) {
