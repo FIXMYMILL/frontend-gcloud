@@ -1922,7 +1922,7 @@ function Section3(bill, price) {
   document.getElementById("bill").innerHTML = bill;
   document.getElementById("price").innerHTML = price;
   // document.getElementById("discountprice").innerHTML = discount;
-  document.getElementById("paid-amt").innerHTML = total + "/-";
+  // document.getElementById("paid-amt").innerHTML = total + "/-";
 
   if (document.querySelector(".section3").classList.contains("activeSection")) {
     let step3Group = document.querySelectorAll(".step3-group");
@@ -2096,100 +2096,100 @@ function checkout(userorder) {
   storeuser(userorder, 2);
   Step4();
 
-//   const fetchres = fetch(
-//     "https://server-410811.el.r.appspot.com/api/payments/requestkey"
-//   );
-//   fetchres
-//     .then((res) => res.json())
-//     .then((d) => {
-//       let options = {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json;charset=utf-8",
-//         },
-//         body: JSON.stringify({ userorder: userorder }),
-//       };
+  //   const fetchres = fetch(
+  //     "https://server-410811.el.r.appspot.com/api/payments/requestkey"
+  //   );
+  //   fetchres
+  //     .then((res) => res.json())
+  //     .then((d) => {
+  //       let options = {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json;charset=utf-8",
+  //         },
+  //         body: JSON.stringify({ userorder: userorder }),
+  //       };
 
-//       let fetchRes = fetch(
-//         "https://server-410811.el.r.appspot.com/api/payments/createorder",
-//         options
-//       );
-//       fetchRes
-//         .then((res) => res.json())
-//         .then((data) => {
-//           console.log(d);
-//           console.log(data);
-//           var poptions = {
-//             key: d.key, // Enter the Key ID generated from the Dashboard
-//             amount: userorder.amount > 1000 ? 30000 : 20000, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-//             currency: "INR",
-//             name: "FIXMYMILL ",
-//             description: userorder.service,
-//             image: "images/Favicon.png",
-//             order_id: data.order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+  //       let fetchRes = fetch(
+  //         "https://server-410811.el.r.appspot.com/api/payments/createorder",
+  //         options
+  //       );
+  //       fetchRes
+  //         .then((res) => res.json())
+  //         .then((data) => {
+  //           console.log(d);
+  //           console.log(data);
+  //           var poptions = {
+  //             key: d.key, // Enter the Key ID generated from the Dashboard
+  //             amount: userorder.amount > 1000 ? 30000 : 20000, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+  //             currency: "INR",
+  //             name: "FIXMYMILL ",
+  //             description: userorder.service,
+  //             image: "images/Favicon.png",
+  //             order_id: data.order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
 
-//             handler: async function (response) {
-//               let voptions = {
-//                 method: "POST",
-//                 headers: {
-//                   "Content-Type": "application/json;charset=utf-8",
-//                 },
-//                 body: JSON.stringify({
-//                   payment_Id: response.razorpay_payment_id,
-//                   order_Id: data.order.id,
-//                   signature: response.razorpay_signature,
-//                 }),
-//               };
-//               // Fake api for making post requests
-//               let fetchRes = fetch(
-//                 "https://server-410811.el.r.appspot.com/api/payments/verifypayment",
-//                 voptions
-//               );
-//               fetchRes
-//                 .then((res) => res.json())
-//                 .then((vd) => {
-//                   console.log(vd);
-//                   if (vd.success === "true") {
-//                     storeuser(userorder, 2);
-//                     Step4();
-//                     console.log(response.razorpay_payment_id);
-//                     document.getElementById("transaction_id").textContent =
-//                       response.razorpay_payment_id;
-//                   } else {
-//                     window.alert(
-//                       "something went wrong please pay again.if any extra amount deduced from bank will be refunded"
-//                     );
-//                   }
-//                 });
-//             },
-//             prefill: {
-//               name: userorder.name,
-//               email: userorder.email,
-//               contact: userorder.phone,
-//             },
-//             notes: {
-//               address: "Razorpay Corporate Office",
-//             },
-//             theme: {
-//               color: "#ffa500",
-//             },
-//           };
-//           var rzp1 = new window.Razorpay(poptions);
-//           rzp1.on("payment.failed", function (response) {
-//             alert(
-//               "something went wrong.Please do repayment.If any amount deduced will be credited to your account within 3 days.please note the below payment id for future queries" +
-//                 response.error.metadata.payment_id
-//             );
-//             // alert(response.error.code);
-//             // alert(response.error.description);
-//             // alert(response.error.source);
-//             // alert(response.error.step);
-//             // alert(response.error.reason);
-//             // alert(response.error.metadata.order_id);
-//             // alert(response.error.metadata.payment_id);
-//           });
+  //             handler: async function (response) {
+  //               let voptions = {
+  //                 method: "POST",
+  //                 headers: {
+  //                   "Content-Type": "application/json;charset=utf-8",
+  //                 },
+  //                 body: JSON.stringify({
+  //                   payment_Id: response.razorpay_payment_id,
+  //                   order_Id: data.order.id,
+  //                   signature: response.razorpay_signature,
+  //                 }),
+  //               };
+  //               // Fake api for making post requests
+  //               let fetchRes = fetch(
+  //                 "https://server-410811.el.r.appspot.com/api/payments/verifypayment",
+  //                 voptions
+  //               );
+  //               fetchRes
+  //                 .then((res) => res.json())
+  //                 .then((vd) => {
+  //                   console.log(vd);
+  //                   if (vd.success === "true") {
+  //                     storeuser(userorder, 2);
+  //                     Step4();
+  //                     console.log(response.razorpay_payment_id);
+  //                     document.getElementById("transaction_id").textContent =
+  //                       response.razorpay_payment_id;
+  //                   } else {
+  //                     window.alert(
+  //                       "something went wrong please pay again.if any extra amount deduced from bank will be refunded"
+  //                     );
+  //                   }
+  //                 });
+  //             },
+  //             prefill: {
+  //               name: userorder.name,
+  //               email: userorder.email,
+  //               contact: userorder.phone,
+  //             },
+  //             notes: {
+  //               address: "Razorpay Corporate Office",
+  //             },
+  //             theme: {
+  //               color: "#ffa500",
+  //             },
+  //           };
+  //           var rzp1 = new window.Razorpay(poptions);
+  //           rzp1.on("payment.failed", function (response) {
+  //             alert(
+  //               "something went wrong.Please do repayment.If any amount deduced will be credited to your account within 3 days.please note the below payment id for future queries" +
+  //                 response.error.metadata.payment_id
+  //             );
+  //             // alert(response.error.code);
+  //             // alert(response.error.description);
+  //             // alert(response.error.source);
+  //             // alert(response.error.step);
+  //             // alert(response.error.reason);
+  //             // alert(response.error.metadata.order_id);
+  //             // alert(response.error.metadata.payment_id);
+  //           });
 
-//           rzp1.open();
-//         });
-//     });
+  //           rzp1.open();
+  //         });
+  //     });
 }
