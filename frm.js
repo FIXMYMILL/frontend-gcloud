@@ -2092,7 +2092,7 @@ function storeuser(user, sheet) {
 }
 
 function checkout(userorder) {
-  // console.log(userorder);
+  console.log("inside checkout");
   storeuser(userorder, 2);
   Step4();
 
